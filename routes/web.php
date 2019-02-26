@@ -89,3 +89,9 @@ Route::get('/idade', 'ControladorTeste@getIdade');
 Route::get('/multiplicar/{n1}/{n2}', 'ControladorTeste@getMult');
 
 Route::resource('/cliente', 'ClienteControlador');
+
+/*Teste com com views*/
+
+Route::get('/Testeview', function(){
+    return view ('TesteView')->with('nome','Vinicius')->with('sobrenome','Paulo');
+});
